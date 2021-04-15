@@ -14,10 +14,12 @@ import { PredictionType } from '../../model/prediction-type';
 import { PredictionResult } from '../../model/prediction-result';
 import { Prediction } from '../../model/prediction';
 
-// Declaring Constant
+// Constant for Font
 const FONT = '16px open-sans';
-const COLOR = '#0074df';
-const SNAPSHOT_INTERVAL = 500;
+// Constant Color of Object Detection
+const COLOR = '#FFA500';
+// Constant for Time to check Object
+const SNAPSHOT_INTERVAL = 200;
 
 @Component({
   selector: 'app-tf-prediction',

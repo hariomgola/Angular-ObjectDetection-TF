@@ -1,17 +1,16 @@
-
 <!--Child Component-->
 
+<!--Div for webcam CSS-->
+<div id='webcamdiv'>
+        <!--Event Binding to Methord-->
+        <webcam id='webcam' [trigger]="triggerObservable" [imageQuality]="1" [captureImageData]="true"
+                (initError)="error($event)" (imageCapture)="capture($event)" [width]="800" [height]="600">
+        </webcam>
+</div>
 
-<!--Event Binding to Methord-->
-<webcam 
-        [trigger]="triggerObservable"
-        [imageQuality]="1"
-        [captureImageData]="true"
-        (initError)="error($event)"
-        (imageCapture)="capture($event)"      >
-</webcam>
-
-<!--Object DetectionBox setup-->
-<canvas #HariPredictionObj [width]="400" [height]="300"></canvas>
+<div id='canvadiv'>
+        <!--Object DetectionBox setup-->
+        <canvas #HariPredictionObj id='canva' [width]="800" [height]="600"></canvas>
+</div>
 
 <!--Child Component-->
