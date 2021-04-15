@@ -1,1 +1,17 @@
-<p>tf-prediction works!</p>
+
+<!--Child Component-->
+
+
+<!--Event Binding to Methord-->
+<webcam 
+        [trigger]="triggerObservable"
+        [imageQuality]="1"
+        [captureImageData]="true"
+        (initError)="error($event)"
+        (imageCapture)="capture($event)"      >
+</webcam>
+
+<!--Object DetectionBox setup-->
+<canvas [width]="400" [height]="300"></canvas>
+
+<!--Child Component-->
