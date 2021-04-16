@@ -1,23 +1,25 @@
 <!--Parent Component Start-->
 
-<!--Importing Child Module-->
-<app-tf-prediction
+<!--Child Component Div-->
+<div id='webcamdiv'>
+  <!--Importing Child Module-->
+  <app-tf-prediction [objectToPredict]="data.objectToDetect" [predictionThreshold]="data.threshold"
+    [isStopOnObjectFoundEnabled]="data.quitOnFound" (predictionChange)="handlePredictionChange($event)">
+  </app-tf-prediction>
+</div>
 
-  [objectToPredict]="data.objectToDetect"
-  [predictionThreshold]="data.threshold"
-  [isStopOnObjectFoundEnabled]="data.quitOnFound"
-  (predictionChange)="handlePredictionChange($event)"    ></app-tf-prediction>
+<!--Prediction Div for CSS-->
+<div id='predictiondiv'>
+  <!--Using Loop to Display Data-->
+  <div *ngFor="let Predictionresult of Predictionresults">
+    <p style="font-size: 1.2em;color: whitesmoke;">Predicted Object - {{ Predictionresult.object }}</p>
+    <p style="font-size: 1.2em;color: whitesmoke;">Percentage - {{ Predictionresult.certainty *100 }}%</p>
+    <hr style="width: 40vh;">
+  </div>
+</div>
 
-
-
-<!--Using Loop to Display Data-->
-<div *ngFor="let Predictionresult of Predictionresults">
-  <p>Classification: {{ Predictionresult.object }}</p>
-  <p [class.correct]="Predictionresult.correct"
-     [class.incorrect]="!Predictionresult.correct">
-    Correct: {{ Predictionresult.correct }}
-  </p>
-  <p>Certainty: {{ Predictionresult.certainty }}%</p>
+<div id="copyright">
+  <p id='copyrightline'>Copyright @ 2021 Smart Glass Team. All Rights Reserved.</p>
 </div>
 
 
