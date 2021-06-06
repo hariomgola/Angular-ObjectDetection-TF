@@ -10,4 +10,6 @@ It is used to monitor real time Object detection in your browser with the help o
  - Open browser and write `http://localhost:4200/`
  
 # Made with :heart:
-Portfolio :computer: `https://hariomgola.github.io/`
+Portfolio :computer: https://hariomgola.github.io/
+
+### copyright @2020 Hariom Gola
